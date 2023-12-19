@@ -43,6 +43,10 @@ summary(credit_model)
 
 
 #EVALUATE THE MODEL
+#Package
+install.packages("gmodels")
+library(gmodels) #(For the CrossTable function)
+
 credit_pred <- predict(credit_model,credit_test)
 #Comparison
 CrossTable(credit_test$default, credit_pred,
